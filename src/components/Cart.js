@@ -13,7 +13,7 @@ export default function Cart({ cart, total }) {
             <tr key={index}>
               <td>{item.product}</td>
               <td>{item.quantity}</td>
-              <td>{item.price}</td>
+              <td>{item.price * item.quantity}</td>
             </tr>
           );
         })}
