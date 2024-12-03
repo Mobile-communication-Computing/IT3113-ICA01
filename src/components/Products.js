@@ -16,25 +16,20 @@ export default function Products() {
       <div className="item2">
         <h4 className="card-title">Buy flowers</h4>
         <div className="grid-container">
-          {
-            flowers.map((flower, index) => {
-              return (
-                <Product
-                  key={index}
-                  product={flower}
-                  setCart={setCart}
-                  setTotal={setTotal}
-                />
-              );
-            })
-            //product
-          }
+          {flowers.map((flower, index) => {
+            return (
+              <Product
+                key={index}
+                product={flower}
+                setCart={setCart}
+                setTotal={setTotal}
+              />
+            );
+          })}
         </div>
       </div>
       <div className="item3">
-        {
-          //cart
-        }
+        <Cart cart={cart} total={total} />
       </div>
     </>
   );
