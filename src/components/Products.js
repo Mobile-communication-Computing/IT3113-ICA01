@@ -3,7 +3,11 @@ import { useState } from "react";
 import { flowers } from "./FlowerDB";
 import Product from "./Product";
 import Cart from "./Cart";
+
 export default function Products() {
+  const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
+
   return (
     <>
       <div className="item1">
@@ -14,7 +18,14 @@ export default function Products() {
         <div className="grid-container">
           {
             flowers.map((flower, index) => {
-              return <Product />;
+              return (
+                <Product
+                  key={index}
+                  Product={flower}
+                  setCart={setCart}
+                  setTotal={setTotal}
+                />
+              );
             })
             //product
           }
