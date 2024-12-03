@@ -8,7 +8,7 @@ export default function Cart({ cart, total }) {
           <td>QTY</td>
           <td>Price</td>
         </thead>
-        {Cart.map((item, index) => {
+        {cart.map((item, index) => {
           return (
             <tr key={index}>
               <td>{item.product}</td>
