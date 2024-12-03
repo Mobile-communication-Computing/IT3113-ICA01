@@ -1,25 +1,27 @@
-export default function Cart() {
-    
-    return (
-        <div className="table-container">
-            <h4 className="card-title">Cart</h4>
-            <table>
-                <thead>
-
-                    <td>Product</td>
-                    <td>QTY</td>
-                    <td>Price</td>
-
-                </thead>
-                {
-                    
-                }
-                <tr>
-                    <td >Grand Total : </td>
-                    <td colSpan={2}>Grand Total</td>
-                </tr>
-            </table>
-           
-        </div>
-    );
+export default function Cart({ cart, total }) {
+  return (
+    <div className="table-container">
+      <h4 className="card-title">Cart</h4>
+      <table>
+        <thead>
+          <td>Product</td>
+          <td>QTY</td>
+          <td>Price</td>
+        </thead>
+        {Cart.map((item, index) => {
+          return (
+            <tr key={index}>
+              <td>{item.product}</td>
+              <td>{item.quantity}</td>
+              <td>{item.price}</td>
+            </tr>
+          );
+        })}
+        <tr>
+          <td>Grand Total : </td>
+          <td colSpan={2}>Grand Total</td>
+        </tr>
+      </table>
+    </div>
+  );
 }
