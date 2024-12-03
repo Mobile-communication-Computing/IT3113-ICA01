@@ -12,14 +12,17 @@ export default function Product({ key, product, setCart, setTotal }) {
     }
   };
   return (
-    <div className="grid-item">
+    <div className="grid-item" key={key}>
       <div class="card">
         <img
           src={require(`../assets/image/${product.img}`)}
           alt={product.name}
         />
         <div class="card-body">
-          <h5 class="card-title">Price:</h5>
+          <h5 class="card-title">
+            {product.name}
+            <br></br>Price:{product.price}
+          </h5>
           <div class="quantity-container">
             <label for="quantity">Quantity:</label>
             <input
