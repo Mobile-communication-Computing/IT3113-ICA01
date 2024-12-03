@@ -21,7 +21,7 @@ export default function Products() {
               return (
                 <Product
                   key={index}
-                  Product={flower}
+                  product={flower}
                   setCart={setCart}
                   setTotal={setTotal}
                 />
