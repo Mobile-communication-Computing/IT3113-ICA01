@@ -19,7 +19,7 @@ export default function Cart({ cart, total }) {
         })}
         <tr>
           <td>Grand Total : </td>
-          <td colSpan={2}>Grand Total</td>
+          <td colSpan={2}>{total}</td>
         </tr>
       </table>
     </div>
